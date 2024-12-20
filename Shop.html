@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эксклюзивный магазин</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #111, #444);
+            color: #f5f5f5;
+        }
+        header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #555;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .item, .class-choice {
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .item h2, .class-choice h2 {
+            font-size: 1.5em;
+            color: #ffd700;
+        }
+        .item p, .class-choice p {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #ccc;
+        }
+        .item button, .class-choice button {
+            background: #ffd700;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #111;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .item button:hover, .class-choice button:hover {
+            background: #ffb700;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #222;
+            border-top: 2px solid #555;
+            color: #ccc;
+        }
+        #class-selection {
+            display: block;
+        }
+        #shop {
+            display: none;
+        }
+    </style>
+    <script>
+        function selectClass(className) {
+            alert(Вы выбрали класс: ${className});
+            document.getElementById('class-selection').style.display = 'none';
+            document.getElementById('shop').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Эксклюзивный Магазин Бихёна</h1>
+        <p>Здесь вы найдете уникальные товары для избранных.</p>
+    </header>
+    <div id="class-selection" class="container">
+        <div class="class-choice">
+            <div>
+                <h2>Медик</h2>
+                <p>Лечит союзников и спасает в критических ситуациях.</p>
+            </div>
+            <button onclick="selectClass('Медик')">Выбрать</button>
+        </div>
+        <div class="class-choice">
+            <div>
+                <h2>Ближник</h2>
+                <p>Мастер рукопашного боя и быстрых атак.</p>
+            </div>
+            <button onclick="selectClass('Ближник')">Выбрать</button>
+        </div>
+        <div class="class-choice">
+            <div>
+                <h2>Лучник</h2>
+                <p>Точный стрелок с мощными дальнобойными атаками.</p>
+            </div>
+            <button onclick="selectClass('Лучник')">Выбрать</button>
+        </div>
+        <div class="class-choice">
+            <div>
+                <h2>Маг</h2>
+                <p>Владыка заклинаний и разрушительных чар.</p>
+            </div>
+            <button onclick="selectClass('Маг')">Выбрать</button>
+        </div>
+        <div class="class-choice">
+            <div>
+                <h2>Танк</h2>
+                <p>Непробиваемая защита и высокая выносливость.</p>
+            </div>
+            <button onclick="selectClass('Танк')">Выбрать</button>
+        </div>
+    </div>
+    <div id="shop" class="container">
+        <div class="item">
+            <div>
+                <h2>Артефакт: Клинок Судьбы</h2>
+                <p>Цена: 5000 монет</p>
+                <p>Описание: Легендарное оружие, способное менять судьбу владельца.</p>
+            </div>
+            <button>Купить</button>
+        </div>
+        <div class="item">
+            <div>
+                <h2>Эликсир Жизни</h2>
+                <p>Цена: 2000 монет</p>
+                <p>Описание: Восстанавливает здоровье и дарует энергию.</p>
+            </div>
+            <button>Купить</button>
+        </div>
+        <div class="item">
+            <div>
+                <h2>Свиток Вечности</h2>
+                <p>Цена: 10000 монет</p>
+                <p>Описание: Позволяет владельцу управлять временем.</p>
+            </div>
+            <button>Купить</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Эксклюзивный Магазин Бихёна. Все права защищены.</p>
+    </footer>
+</body>
+</html>
